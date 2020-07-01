@@ -1,0 +1,156 @@
+*{
+	margin: 0px;
+	/*padding: 0px;*/
+}
+
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: all 1000ms;
+}
+
+.showcase:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+.showcase:hover .content {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  left: 10%;
+  margin-top: 5px;
+  margin-left: -145px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: all 1000ms;
+  padding-left: 18px;
+}
+
+.content .logo {
+  height: 180px;
+  width: 220px;
+}
+
+.content .title {
+	color: #000;
+	font-weight: bold;
+    font-size: 4.0rem;
+    margin-top: 1rem;
+    
+}
+
+.content .text {
+	color: #000;
+	font-weight: 900;
+	font-size: 1.8rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+.container{
+	width: 70%;
+	max-width: 1100px;
+	margin: auto;
+}
+
+.grid-3{
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	justify-content: center;
+	grid-gap: 20px;
+	padding-bottom: 20px;
+}
+
+.grid-3 h3{
+	font-size: 1.5rem;
+	padding-top: 10px;
+}
+
+.grid-2{
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+	justify-content: center;
+}
+
+.grid-2 i{
+	padding-top: 35px;
+}
+
+.grid-2 h3{
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #000;
+  padding: 20px;
+}
+
+.bg-dark {
+  background: #000;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 980px){
+	.content {
+		position: absolute;
+		z-index: 1;
+		top: 2%;
+		left: 50%;
+		margin-top: 105px;
+		margin-left: -145px;
+		width: 300px;
+		height: 350px;
+		text-align: center;
+		transition: all 1000ms;
+		padding-left: 0px;
+}
+    .content .title, .content .text{
+    	text-align: center;
+    	color: #fff;
+    }
+    .grid-3{
+    	margin-bottom: 1rem;
+    }
+    .grid-3 div{
+    	padding: 10px 0px;
+    }
+
+	.grid-3, .grid-2{
+		grid-template-columns: 1fr;
+	} 
+	.grid-2{
+		margin-top: 0px;
+	}
+	.grid-2 h3{
+		padding-top: 8px;
+	}
+}
